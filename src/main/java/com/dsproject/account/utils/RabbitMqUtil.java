@@ -1,9 +1,9 @@
-package com.visualpathit.account.utils;
+package com.dsproject.account.utils;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.visualpathit.account.beans.Components;
+import com.dsproject.account.beans.Components;
 
 @Service
 public class RabbitMqUtil {

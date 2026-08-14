@@ -1,8 +1,8 @@
-package com.visualpathit.account.service;
+package com.dsproject.account.service;
 
-import com.visualpathit.account.model.Role;
-import com.visualpathit.account.model.User;
-import com.visualpathit.account.repository.UserRepository;
+import com.dsproject.account.model.Role;
+import com.dsproject.account.model.User;
+import com.dsproject.account.repository.UserRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;

@@ -1,4 +1,4 @@
-package com.visualpathit.account.setup;
+package com.dsproject.account.setup;
 
 import org.springframework.web.servlet.view.AbstractUrlBasedView;
 import org.springframework.web.servlet.view.InternalResourceView;

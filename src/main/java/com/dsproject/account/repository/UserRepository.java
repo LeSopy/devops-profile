@@ -1,10 +1,10 @@
-package com.visualpathit.account.repository;
+package com.dsproject.account.repository;
 
 import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.visualpathit.account.model.User;
+import com.dsproject.account.model.User;
 
 public interface UserRepository extends JpaRepository<User, Long> {
     User findByUsername(String username);

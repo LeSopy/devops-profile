@@ -1,4 +1,4 @@
-package com.visualpathit.account.service;
+package com.dsproject.account.service;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

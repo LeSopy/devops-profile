@@ -1,8 +1,8 @@
-package com.visualpathit.account.service;
+package com.dsproject.account.service;
 
 import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.ConnectionFactory;
-import com.visualpathit.account.utils.RabbitMqUtil;
+import com.dsproject.account.utils.RabbitMqUtil;
 
 import org.springframework.stereotype.Service;
 import com.rabbitmq.client.Channel;

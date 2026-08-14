@@ -1,4 +1,4 @@
-package com.visualpathit.account.service;
+package com.dsproject.account.service;
 
 import org.springframework.amqp.core.ExchangeTypes;
 import org.springframework.amqp.rabbit.annotation.Exchange;

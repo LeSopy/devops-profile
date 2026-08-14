@@ -1,11 +1,11 @@
-package com.visualpathit.account.controller;
+package com.dsproject.account.controller;
 
-import com.visualpathit.account.model.User;
-import com.visualpathit.account.service.ProducerService;
-import com.visualpathit.account.service.SecurityService;
-import com.visualpathit.account.service.UserService;
-import com.visualpathit.account.utils.MemcachedUtils;
-import com.visualpathit.account.validator.UserValidator;
+import com.dsproject.account.model.User;
+import com.dsproject.account.service.ProducerService;
+import com.dsproject.account.service.SecurityService;
+import com.dsproject.account.service.UserService;
+import com.dsproject.account.utils.MemcachedUtils;
+import com.dsproject.account.validator.UserValidator;
 
 import java.util.List;
 import java.util.UUID;

@@ -1,4 +1,4 @@
-package com.visualpathit.account.service;
+package com.dsproject.account.service;
 
 public interface ConsumerService {
 

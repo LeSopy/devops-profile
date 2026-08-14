@@ -1,4 +1,4 @@
-package com.visualpathit.account.utils;
+package com.dsproject.account.utils;
 
 import java.net.InetSocketAddress;
 import java.net.SocketAddress;
@@ -7,8 +7,8 @@ import java.util.concurrent.Future;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.visualpathit.account.beans.Components;
-import com.visualpathit.account.model.User;
+import com.dsproject.account.beans.Components;
+import com.dsproject.account.model.User;
 
 import net.spy.memcached.MemcachedClient;
 @Service
