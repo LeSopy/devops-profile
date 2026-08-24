@@ -1,0 +1,5 @@
+com\dsproject\account\modelTest\UserTest.class
+com\dsproject\account\controllerTest\UserControllerTest.class
+com\dsproject\account\setup\StandaloneMvcTestViewResolver.class
+com\dsproject\account\controllerTest\SampleTest.class
+com\dsproject\account\modelTest\RoleTest.class

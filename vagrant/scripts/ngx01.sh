@@ -9,7 +9,7 @@ echo "==> Writing reverse-proxy config"
 cat > /etc/nginx/sites-available/vprofile << 'EOF'
 server {
     listen 80;
-    server_name ngx01;
+    server_name godevopsprojects.com;
 
     location / {
         proxy_pass http://tc01:8080/;

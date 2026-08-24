@@ -1,6 +1,13 @@
 #!/bin/bash
 set -e
 
+echo "==> Adding hostname resolution for backend services"
+cat >> /etc/hosts << EOF
+172.31.3.24 db01
+172.31.12.127 mc01
+172.31.7.220 rmq01
+EOF
+
 echo "==> Installing JDK 17"
 dnf install -y java-17-openjdk java-17-openjdk-devel
 
@@ -53,9 +60,9 @@ if systemctl is-active --quiet firewalld; then
 fi
 
 echo "==> Deploying the app WAR, if one has been built"
-if [ -f /target/vprofile-v2.war ]; then
+if [ -f /home/rocky/vprofile-v2.war ]; then
     rm -rf /opt/tomcat/webapps/ROOT
-    cp /target/vprofile-v2.war /opt/tomcat/webapps/ROOT.war
+    cp /home/rocky/vprofile-v2.war /opt/tomcat/webapps/ROOT.war
     chown tomcat:tomcat /opt/tomcat/webapps/ROOT.war
     systemctl restart tomcat
     echo "WAR deployed."

@@ -56,7 +56,7 @@ public class UserController {
         return "redirect:/welcome";
     }
     /** {@inheritDoc} */
-    @RequestMapping(value = "/login", method = RequestMethod.POST)
+    @RequestMapping(value = "/login", method = RequestMethod.GET)
     public final String login(final Model model, final String error, final String logout) {
         System.out.println("Model data"+model.toString());
     	if (error != null){

@@ -1,4 +1,4 @@
-package com.visualpathit.account.service;
+package com.dsproject.account.service;
 
 /** method for finding already added user !*/
 public interface SecurityService {

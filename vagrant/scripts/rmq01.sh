@@ -82,6 +82,11 @@ systemctl restart sshd
 echo "==> Enabling and starting RabbitMQ"
 systemctl enable --now rabbitmq-server
 
+echo "==> Waiting for RabbitMQ to be fully ready"
+until rabbitmqctl status &>/dev/null; do
+    sleep 2
+done
+
 echo "==> Creating the app's expected user (idempotent)"
 if ! rabbitmqctl list_users | grep -q "^test"; then
     rabbitmqctl add_user test test

@@ -27,12 +27,16 @@ FLUSH PRIVILEGES;
 SQL
 
 echo "==> Importing schema if not already exists"
-TABLE_COUNT=$(mysql -u root -N  -e "SELECT COUNT(*) FROM information_schema.tables WHERE table_schema='accounts';")
-if ["$TABLE_COUNT" -eq 0]; then
-	mysql -u root accounts < /vagrant/sql/db_backup.sql
-	echo "schema imported"
+if [ -f /home/rocky/db_backup.sql ]; then
+	TABLE_COUNT=$(mysql -u root -N  -e "SELECT COUNT(*) FROM information_schema.tables WHERE table_schema='accounts';")
+	if ["$TABLE_COUNT" -eq 0]; then
+		mysql -u root accounts < /home/rocky/db_backup.sql
+		echo "schema imported"
+	else
+		echo "Schema already present. Skipping import"
+	fi
 else
-	echo "Schema already present. Skipping import"
+	echo "No db_backup.sql found yet at /home/rocky - skipping import for now. Upload it vi scp and import manualy "
 fi
 
 echo "==> Opening firewall for MySQL (if firewalld is active)"
