@@ -1,5 +1,0 @@
-# Created at 2026-08-18T03:57:20.309
-Boot Manifest-JAR contains absolute paths in classpath 'D:\DS\Data Science\CICD\devops-profile\target\test-classes'
-Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
-'other' has different root
-

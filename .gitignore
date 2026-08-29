@@ -1,3 +1,6 @@
 # Vagrant machine-specific state (VM UUIDs, SSH key paths, network cache)
 vagrant/.vagrant/
 *.pem
+
+# target directory
+target/

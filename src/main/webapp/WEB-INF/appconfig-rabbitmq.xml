@@ -12,8 +12,17 @@
 
     <rabbit:annotation-driven/>
 
-    <rabbit:connection-factory id="connectionFactory" host="${rabbitmq.address}" port="${rabbitmq.port}" username="${rabbitmq.username}" password="${rabbitmq.password}"/>
+    <bean id="rabbitConnectionFactory" class="org.springframework.amqp.rabbit.connection.RabbitConnectionFactoryBean">
+        <property name="useSSL" value="true"/>
+    </bean>
 
+    <rabbit:connection-factory id="connectionFactory"
+        connection-factory="rabbitConnectionFactory"
+        host="${rabbitmq.address}"
+        port="${rabbitmq.port}"
+        username="${rabbitmq.username}"
+        password="${rabbitmq.password}"/>
+        
     <rabbit:admin connection-factory="connectionFactory"/>
 
     <rabbit:template id="amqpTemplate" connection-factory="connectionFactory"/>
